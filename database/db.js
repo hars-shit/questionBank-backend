@@ -1,7 +1,8 @@
 const mongoose=require('mongoose')
 
 const Connection=async()=>{
-    const URL=`mongodb+srv://upadhyayharshit05:harshitdb@cluster0.lvrsvob.mongodb.net/?retryWrites=true&w=majority`
+    const URL=process.env.URI
+    
     try{
         await mongoose.connect(URL,{
            useNewUrlParser:true

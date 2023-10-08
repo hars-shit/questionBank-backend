@@ -3,18 +3,15 @@ const mongoose = require("mongoose")
 const sencondYearSchema = new mongoose.Schema({
     year:{
         type:Number,
-        required:true,
     },
     link:{
-        type:String,
-        required:true,
+        type:String,  
     },
     branch:{
         type:String,
     },
     sub:{
         type:String,
-        required:true,
         unique:true
     }
 })
