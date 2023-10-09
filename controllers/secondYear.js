@@ -2,7 +2,7 @@ const secondModel = require("../modal/second.model");
 
 exports.second_year_controller=async(req,res)=>{
     try{
-        let data=await secondYearModel.find({});
+        let data=await secondModel.find({});
         console.log('data',data)
         res.status(200).json(data)
       
