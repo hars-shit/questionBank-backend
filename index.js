@@ -5,6 +5,7 @@ const DefaultDataSecondYear = require('./defaults/secondYearDataPush');
 const secondroute = require("./routes/route");
 const DefaultDataThirdYear = require('./defaults/thirdYearDataPush');
 const DefaultDataFourthYear = require('./defaults/fourthYearDataPush');
+const routeForFind = require('./routes/filtered');
 
 require('dotenv').config();
 
@@ -19,6 +20,7 @@ Connection();
 // route 
 app.use(cors())
 app.use('/',secondroute)
+app.use('/',routeForFind)
 
 
 const PORT= process.env.PORT || 9000;
